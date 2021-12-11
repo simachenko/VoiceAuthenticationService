@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Diploma.Core\Diploma.Core.csproj" />
+    <ProjectReference Include="..\Diploma.DTO\Diploma.DTO.csproj" />
+  </ItemGroup>
+
+</Project>

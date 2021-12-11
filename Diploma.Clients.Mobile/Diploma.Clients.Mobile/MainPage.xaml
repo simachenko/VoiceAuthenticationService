@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="Diploma.Clients.Mobile.MainPage"
+             Title="AuthorizationApp">
+
+    <ContentPage.Resources>
+        <Style  x:Key="btnStyle" TargetType="Button">
+            <Setter Property="WidthRequest" Value="95" />
+            <Setter Property="HeightRequest" Value="95" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="EndAndExpand">
+        <FlexLayout
+            Padding="10"
+            Direction="Row"
+            JustifyContent="SpaceBetween">
+            <ffimageloadingsvg:SvgCachedImage
+                x:Name="CreateFamilyButton"
+                HeightRequest="95"
+                Source="resource://Diploma.Clients.Mobile.Resources.family-svgrepo-com.svg"
+                WidthRequest="95">
+                <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CreateFamilyButton_Clicked"></TapGestureRecognizer>
+                </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+            </ffimageloadingsvg:SvgCachedImage>
+            <ffimageloadingsvg:SvgCachedImage
+                x:Name="CreateAccountButton"
+                HeightRequest="95"
+                Source="resource://Diploma.Clients.Mobile.Resources.account-svgrepo-com.svg"
+                WidthRequest="95">
+                <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CreateAccountButton_Clicked"></TapGestureRecognizer>
+                </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+            </ffimageloadingsvg:SvgCachedImage>
+            <ffimageloadingsvg:SvgCachedImage
+                x:Name="AuthorizeButton"
+                HeightRequest="95"
+                Source="resource://Diploma.Clients.Mobile.Resources.login-svgrepo-com.svg"
+                WidthRequest="95">
+                <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="AuthorizeButton_Clicked"></TapGestureRecognizer>
+                </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+            </ffimageloadingsvg:SvgCachedImage>
+        </FlexLayout>
+        <StackLayout
+            HeightRequest="400">
+            <Label FontSize="Large" TextColor="DarkRed" x:Name="CommandResult" Text="CommandResult" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <FlexLayout
+            Padding="10"
+            Direction="Row"
+            JustifyContent="SpaceBetween">
+            <ffimageloadingsvg:SvgCachedImage
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand"
+                x:Name="RunFemaleCommand"
+                HeightRequest="95"
+                Source="resource://Diploma.Clients.Mobile.Resources.support-female-svgrepo-com.svg"
+                WidthRequest="95">
+                <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="RunFemaleCommand_Clicked"></TapGestureRecognizer>
+                </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+            </ffimageloadingsvg:SvgCachedImage>
+            <ffimageloadingsvg:SvgCachedImage
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand"
+                x:Name="RecodButton"
+                HeightRequest="100"
+                Source="resource://Diploma.Clients.Mobile.Resources.microphone-svgrepo-com.svg"
+                WidthRequest="100">
+                <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="RecodButton_Clicked"></TapGestureRecognizer>
+                </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+            </ffimageloadingsvg:SvgCachedImage>
+            <ffimageloadingsvg:SvgCachedImage
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand"
+                x:Name="RunMaleCommand"
+                HeightRequest="95"
+                Source="resource://Diploma.Clients.Mobile.Resources.male-reporter-news-svgrepo-com.svg"
+                WidthRequest="95">
+                <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="RunMaleCommand_Clicked"></TapGestureRecognizer>
+                </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+            </ffimageloadingsvg:SvgCachedImage>
+        </FlexLayout>
+    </StackLayout>
+
+</ContentPage>
